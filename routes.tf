@@ -6,7 +6,6 @@ resource "aws_route_table" "route" {
   }
 }
 
-
 resource "aws_route_table_association" "assco" {
   count = length(var.SUBNET_CIDR)
   subnet_id      = element(aws_subnet.main.*.id, count.index)

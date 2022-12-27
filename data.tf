@@ -1,8 +1,8 @@
 data "terraform_remote_state" "tgw" {
   backend = "s3"
-  config {
+  config = {
     bucket = "terraformforme"
-    key    = "vpc/${var.ENV}/cart/terraform.tfstate"
+    key    = "transit-tg/${var.ENV}/terraform.tfstate"
     region = "us-east-1"
   }
 }

@@ -17,7 +17,7 @@ resource "aws_route_table_association" "assco" {
 #  route_table_id = aws_route_table.route.id
 #  destination_cidr_block = data.terraform_remote_state.tgw.outputs.DEFAULT_VPC_CIDR
 #  transit_gateway_id = data.terraform_remote_state.tgw.outputs.TRANSIT_GW
-}
+#}
 
 resource "aws_route" "app-vpc-rt-in-default-vpc-rt" {
   route_table_id = data.terraform_remote_state.tgw.outputs.DEFAULT_VPC_RT
